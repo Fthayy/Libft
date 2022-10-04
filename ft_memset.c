@@ -6,16 +6,16 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:27:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/04 15:41:17 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/04 19:02:08 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned long x;
-	char *s;
+	unsigned long	x;
+	char	*s;
 	s = b;
 	x = 0;
-	while ( x < len )
+	while (x < len )
 	{
 		s[x] = c;
 		x++;

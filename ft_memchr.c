@@ -6,11 +6,11 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:18:03 by fay               #+#    #+#             */
-/*   Updated: 2022/10/04 18:34:58 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/04 19:02:58 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memchr(const void *ptr, int c)
+void	*ft_memchr(const void *ptr, int c)
 {
 	const char	*s1;
 	int	x;
@@ -20,12 +20,11 @@ void *ft_memchr(const void *ptr, int c)
 	while ( s1[x] != '\0')
 	{
 		if (s1[x] == c)
-			return ((void *)s1+x);
+			return ((void *)s1 + x);
 		x++;
 	}
-	return 0;
+	return (0);
 }
-
 
 #include <stdio.h>
 #include <string.h>
