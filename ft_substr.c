@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fay <fay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 13:27:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 13:00:13 by fay              ###   ########.fr       */
+/*   Created: 2022/10/07 12:22:32 by fay               #+#    #+#             */
+/*   Updated: 2022/10/07 12:54:52 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+#include <stdlib.h>
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned long	x;
-	char			*s;
+	char	*s1;
+	int		x;
 
-	s = b;
 	x = 0;
-	while (x < len)
+	s1 = malloc(len * sizeof(char) + 1);
+	while (s[start] != '\0' && len != 0)
 	{
-		s[x] = c;
+		s1[x] = s[start];
+		start++;
+		len--;
 		x++;
 	}
-	return (s);
+	s1[x] = '\0';
+	return (s1);
+}
+int	main(void)
+{
+	char x[] = "Hello world";
+	printf("%s", ft_substr(x, 6, 6));
 }
