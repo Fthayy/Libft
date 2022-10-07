@@ -31,6 +31,7 @@ int	ft_size(char const *s1, char const *set)
 			}
 			y++;
 		}
+		y = 0;
 		x++;
 		a++;
 	}
@@ -79,6 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 		x++;
 	}
+	s2[a] = '\0';
 	return (s2);
 }
 
