@@ -15,16 +15,9 @@ char	*ft_strchr(const char *str, int c)
 	int	x;
 
 	x = 0;
-
 	while (str[x] != '\0' && str[x] != c)
 	{
 		x++;
 	}
 	return ((char *)str + x);
-}
-#include <stdio.h>
-int main()
-{
-	const char a[]="fatih";
-	printf("%s",ft_strchr(a,'t'));
 }

@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void bzero(void *s, size_t n)
+#include <stdio.h>
+void	bzero(void *s, size_t n)
 {
-
+}

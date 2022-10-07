@@ -9,7 +9,7 @@
 /*   Updated: 2022/10/07 12:55:12 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <stdio.h>
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char *s1;

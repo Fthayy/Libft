@@ -6,9 +6,11 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:14:59 by fay               #+#    #+#             */
-/*   Updated: 2022/10/04 19:00:23 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/07 13:48:54 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -34,12 +36,4 @@ int	ft_atoi(const char *str)
 		x++;
 	}
 	return (res * nb);
-}	
-#include <stdio.h>
-int main()
-{
-	char a[] ="-244";
-	printf("%d",ft_atoi(a));
 }
-
-

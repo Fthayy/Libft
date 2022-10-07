@@ -14,8 +14,8 @@
 #include <stdlib.h>
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*s1;
-	int		x;
+	char *s1;
+	int x;
 
 	x = 0;
 	s1 = malloc(len * sizeof(char) + 1);
@@ -28,9 +28,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	s1[x] = '\0';
 	return (s1);
-}
-int	main(void)
-{
-	char x[] = "Hello world";
-	printf("%s", ft_substr(x, 6, 6));
 }
