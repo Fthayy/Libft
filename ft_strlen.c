@@ -9,8 +9,8 @@
 /*   Updated: 2022/10/04 18:57:24 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_strlen(const char *s)
+#include libft.h
+size_t	ft_strlen(const char *s)
 {
 	int	x;
 

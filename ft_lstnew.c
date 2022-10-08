@@ -1,26 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:52:53 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 15:58:45 by fay              ###   ########.fr       */
+/*   Created: 2022/10/08 13:42:14 by fay               #+#    #+#             */
+/*   Updated: 2022/10/08 13:43:13 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include<fcntl.h> 
-
-void ft_putchar_fd(char c,int fd)
-{
-	write(fd,&c,1);
-}
-
-int main()
-{
-	int fd;
-	fd =  open ("fth.txt", O_RDWR | O_CREAT);
-	ft_putchar_fd('b',fd);
-}
+t_list *ft_lstnew(void *content)

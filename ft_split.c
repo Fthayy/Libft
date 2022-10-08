@@ -13,5 +13,26 @@
 
 char **ft_split(char const *s,char c)
 {
-    
+    int x;
+
+    x = 0;
+    while (s[x] != '\0')
+    {
+        if ([x] == c)
+        {
+            while(s[x+y] != '\0')
+                y++;
+        }
+        else
+            x++;
+    }
+}
+
+#include <stdio.h>
+
+int main()
+{
+    char a[]="fatihay";
+    char b='i';
+    printf("%d",ft_split(a,b));
 }

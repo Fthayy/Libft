@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 15:52:53 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 15:58:45 by fay              ###   ########.fr       */
+/*   Created: 2022/10/08 12:39:09 by fay               #+#    #+#             */
+/*   Updated: 2022/10/08 12:43:51 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include<fcntl.h> 
-
-void ft_putchar_fd(char c,int fd)
+void ft_striteri(char *s,void (*f)(unsigned int, char*))
 {
-	write(fd,&c,1);
-}
+	int		i;
 
-int main()
-{
-	int fd;
-	fd =  open ("fth.txt", O_RDWR | O_CREAT);
-	ft_putchar_fd('b',fd);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
