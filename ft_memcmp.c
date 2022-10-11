@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:42:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 17:02:26 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 17:22:44 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (x < n)
 	{
 		if (str1[x] != str2[x])
-			return (str1[x] - str2[x]);
+			return (str1[x]-str2[x]);
 		x++;
 	}
-	return 0;
+	return (0);
 }
+
