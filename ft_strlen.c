@@ -6,58 +6,18 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:25:19 by fay               #+#    #+#             */
-/*   Updated: 2022/10/04 18:57:24 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 10:04:07 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int ft_strlen(int x)
+size_t	ft_strlen(const char *s)
 {
-  int a;
-  
-  a = 0;
-  if ( x < 0)
-  {
-    a++;
-    x = -x;
-  }
-  while (x > 0)
-  {
-    x = x / 10;
-    a++;
-  }
-  return (a);
-}
+	size_t i;
 
-char    *ft_itoa(int n)
-{
-    int size;
-    char *s;
-    int x;
-    
-    x = n;
-    if (n < 0)
-      n = -n;
-    size = ft_strlen(x);
-    s = malloc(size*sizeof(char)+1);
-    s[size--] = '\0';
-    while (n > 9)
-    {
-        s[size] = n % 10 + '0';
-        n = n / 10;
-        size--;
-    }
-    if (n <= 9)
-        s[size--] = n % 10 + '0';
-    if (x < 0)
-      s[size--] = '-';
-    return (s);
-}
-
-#include <stdio.h>
-int main()
-{
-    int x =-425364;
-    printf("%s",ft_itoa(x));
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
