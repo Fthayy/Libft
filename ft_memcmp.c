@@ -6,20 +6,27 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:42:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 13:10:03 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 17:02:26 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, int n)
+#include "stdio.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int			x;
-	const char	*str1;
-	const char	*str2;
+	size_t		x;
+	const unsigned	char	*str1;
+	const unsigned	char	*str2;
 
 	str1 = s1;
 	x = 0;
 	str2 = s2;
-	while (str1[x] != '\0' && str2[x] != '\0' && str1[x] == str2[x] && x < n)
+
+	while (x < n)
+	{
+		if (str1[x] != str2[x])
+			return (str1[x] - str2[x]);
 		x++;
-	return (str1[x] - str2[x]);
+	}
+	return 0;
 }
