@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:35:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 17:09:04 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 13:24:09 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -82,11 +82,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	s2[a] = '\0';
 	return (s2);
-}
-
-int	main(void)
-{
-	char const a[] = "fatih ay";
-	char const b[] = "askh";
-	printf("%s", ft_strtrim(a, b));
 }

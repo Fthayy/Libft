@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:04:08 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 16:04:10 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 13:26:10 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,4 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[x], 1);
 		x++;
 	}
-}
-int	main(void)
-{
-	int fd;
-	fd = open("fatih.txt", O_RDWR | O_CREAT);
-	char a[] = "kkk";
-	ft_putstr_fd(a, fd);
 }

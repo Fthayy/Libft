@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 18:30:08 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 19:06:20 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 12:05:24 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[x] = '\0';
 	return (str);
-}
-
-#include <stdio.h>
-
-char	f(unsigned int i, char c)
-{
-	char	str;
-
-	str = c + 3;
-	return (str);
-}
-
-int	main(void)
-{
-	char	str1[] = "abc";
-	char	*str2;
-	str2 = ft_strmapi(str1, *f);
-	printf("%s\n", str2);
 }

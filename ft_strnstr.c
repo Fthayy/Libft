@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-char    *strnstr(const char *haystack, const char *needle, size_t len)
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    int    i;
-    int    x;
+    size_t    i;
+    size_t    x;
 
     i = 0;
     x = 0;
@@ -22,11 +22,4 @@ char    *strnstr(const char *haystack, const char *needle, size_t len)
         i++;
     }
     return (0);
-}
-
-int main()
-{
-const char a[] = "fatihaygeliyor";
-const char b[] = "yge";
-printf("%s",strnstr(a,b,9));
 }

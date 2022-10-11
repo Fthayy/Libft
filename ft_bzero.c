@@ -6,12 +6,12 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:42:48 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 11:28:42 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 13:14:13 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-void	bzero(void *s, size_t n)
+#include <libft.h>
+void	ft_bzero(void *s, size_t n)
 {
 	size_t x;
 	char *str;

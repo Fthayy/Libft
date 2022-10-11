@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:27:33 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 16:27:35 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 13:26:39 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <fcntl.h>
@@ -39,10 +39,4 @@ void	ft_putnbr_fd(int nb, int fd)
 		ft_putchar_fd(nb + 48, fd);
 }
 
-int	main(void)
-{
-	int x = 43434324;
-	int fd;
-	fd = open("ahmet.txt", O_RDWR | O_CREAT);
-	ft_putnbr_fd(x, fd);
-}
+

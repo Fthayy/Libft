@@ -6,13 +6,13 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:40:15 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 09:32:43 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 12:46:18 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 
 	while (lst != NULL && lst->next != NULL)
