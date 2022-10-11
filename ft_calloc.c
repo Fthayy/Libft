@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:52:53 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 11:18:50 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/11 15:33:32 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void *ptr;
-
+	if (count*size < size)
+		return (NULL);
 	ptr = malloc(count * size);
 	if (ptr == NULL)
 		return (ptr);
