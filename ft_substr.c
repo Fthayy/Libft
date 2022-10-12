@@ -6,7 +6,7 @@
 /*   By: fay <fay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:22:32 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 12:54:52 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/12 15:34:35 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	x = 0;
 	s1 = malloc(len * sizeof(char) + 1);
+	if (!s1)
+		return (0);
 	while (s[start] != '\0' && len != 0)
 	{
 		s1[x] = s[start];

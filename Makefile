@@ -6,7 +6,7 @@
 #    By: fay <marvin@42.fr>                         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 11:45:50 by fay               #+#    #+#              #
-#    Updated: 2022/10/11 11:53:26 by fay              ###   ########.fr        #
+#    Updated: 2022/10/12 18:13:26 by fay              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS		= ft_memset.c \
 			ft_split.c \
 			ft_itoa.c \
 			ft_strmapi.c \
+			ft_striteri.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
