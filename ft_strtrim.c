@@ -6,11 +6,13 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:35:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 13:24:09 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/14 12:41:27 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
+/*
 int	ft_size(char const *s1, char const *set)
 {
 	int	x;
@@ -82,4 +84,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	s2[a] = '\0';
 	return (s2);
+}*/
+
+char    *ft_strtrim(char const *s1, char const *set)
+{
+    char *a;
+    size_t len;
+    while (*s1 && ft_strchr(set, *s1))
+        s1++;
+    len = ft_strlen(s1);
+    while (ft_strchr(set, s1[len]) && len)
+        len--;
+    a = ft_substr((char *)s1, 0, len + 1);
+    return (a);
 }
