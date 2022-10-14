@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:03:44 by fay               #+#    #+#             */
-/*   Updated: 2022/10/11 13:25:29 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/14 17:25:37 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 static int	count_words(const char *str, char c)
 {
 	int i;
-	int trigger;
+	int x;
 
 	i = 0;
 	trigger = 0;
 	while (*str)
 	{
-		if (*str != c && trigger == 0)
+		if (*str != c && x == 0)
 		{
-			trigger = 1;
+			x = 1;
 			i++;
 		}
 		else if (*str == c)
-			trigger = 0;
+			x = 0;
 		str++;
 	}
 	return (i);

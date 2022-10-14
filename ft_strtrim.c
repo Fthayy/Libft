@@ -24,7 +24,7 @@ static char    *ft_printer(char const *s, unsigned int start, size_t len)
     if (start <  t)
     {
       s1 =(char *)malloc((len) * sizeof(char) + 1);
-        while (s[start] != '\0' && len > 0)
+        while (s[start] != '\0' && len >0)
         {
             s1[x] = s[start];
             start++;
