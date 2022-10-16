@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:35:22 by fay               #+#    #+#             */
-/*   Updated: 2022/10/14 16:43:01 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/16 18:22:27 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,7 +23,8 @@ static char	*ft_printer(char const *s, unsigned int start, size_t len)
 	x = 0;
 	if (start < t)
 	{
-		s1 = (char *)malloc((len) * sizeof(char) + 1);
+		if (!(s1 = (char *)malloc((len) * sizeof(char) + 1)))
+			return 0;
 		while (s[start] != '\0' && len > 0)
 		{
 			s1[x] = s[start];

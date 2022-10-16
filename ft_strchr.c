@@ -6,23 +6,20 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:32:06 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 14:59:26 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/16 18:15:06 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <libft.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	char	*str;
-
-	str = (char *)s;
-	while (*str != c && c < 128)
+	while (*str)
 	{
-		if (*str == '\0')
-		{
-			return (0);
-		}
+		if (*str == c)
+			return ((char *)str);
 		str++;
 	}
-	return (str);
+	if (c == '\0')
+		return ((char *)str);
+	return (0);
 }

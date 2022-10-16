@@ -6,32 +6,27 @@
 /*   By: fay <fay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:27:25 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 15:01:30 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/16 18:33:58 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char			*s1;
-	const char		*s2;
-	unsigned long	i;
-	size_t			a;
+	size_t				i;
+	char		*s1;
+	const char	*s2;
 
-	a = len;
-	i = 0;
 	s1 = dst;
-	s2 = src;
-	if (!s1 || !s2)
-		return (0);
-	if (s1 > s2)
-		while (len-- > 0)
-			s1[len] = s2[len];
+	s2 =src;
+	i = 0;
+	if (!s1 && !s2)
+		return (NULL);
+	if (s2 < s1)
+		while (++i <= len)
+			s1[len - i] = s2[len - i];
 	else
-		while (i < len)
-		{
-			s1[i] = s2[i];
-			i++;
-		}
+		while (len-- > 0)
+			*(s1++) = *(s2++);
 	return (dst);
 }
