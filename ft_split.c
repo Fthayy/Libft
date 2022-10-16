@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:03:44 by fay               #+#    #+#             */
-/*   Updated: 2022/10/14 17:25:37 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/16 14:10:37 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 static int	count_words(const char *str, char c)
 {
-	int i;
-	int x;
+	int	i;
+	int	x;
 
 	i = 0;
-	trigger = 0;
+	x = 0;
 	while (*str)
 	{
 		if (*str != c && x == 0)
@@ -46,7 +46,7 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -71,4 +71,4 @@ char		**ft_split(char const *s, char c)
 	}
 	split[j] = 0;
 	return (split);
-}     
+}

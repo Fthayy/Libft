@@ -6,19 +6,11 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:49:27 by fay               #+#    #+#             */
-/*   Updated: 2022/10/07 12:06:41 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/16 14:59:19 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-int	ft_strlen(const char *x)
-{
-	int	i;
+#include <libft.h>
 
-	i = 0;
-	while (x[i] != '\0')
-		i++;
-	return (i);
-}
 char	*ft_strdup(const char *s1)
 {
 	char	*s2;

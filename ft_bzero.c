@@ -6,17 +6,18 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:42:48 by fay               #+#    #+#             */
-/*   Updated: 2022/10/14 13:06:25 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/16 15:00:02 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+
 void	ft_bzero(void *s, size_t n)
 {
-	size_t x;
-	char *str;
-	
-	str = s;	
+	size_t	x;
+	char	*str;
+
+	str = s;
 	x = 0;
 	while (x < n)
 	{
