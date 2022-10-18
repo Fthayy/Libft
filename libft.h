@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:58:02 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 17:53:48 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/18 10:56:14 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 # define BUFFER_SIZE 1
 
@@ -58,7 +59,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 typedef struct s_list
 {
-	void			*content;
+	void 			*content;
 	struct s_list	*next;
 }					t_list;
 t_list				*ft_lstnew(void *content);

@@ -6,35 +6,34 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:39:13 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 18:38:36 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/18 09:38:30 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t		ft_strlcat(char *dest, const char *src, size_t size)
 {
-	char	*s;
-	size_t	len_dst;
-	size_t	res;
-	size_t	len_src;
-	size_t	i;
+	size_t		idx;
+	size_t		src_idx;
+	size_t		value;
 
-	s = (char *)src;
-	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(s);
-	res = 0;
-	i = 0;
-	if (size > len_dst)
-		res = len_src + len_dst;
+	if (size == 0)
+		return (ft_strlen(src));
+	else if (size < ft_strlen(dest))
+		value = ft_strlen(src) + size;
 	else
-		res = len_src + size;
-	while (s[i] && (len_dst + 1) < size)
+		value = ft_strlen(src) + ft_strlen(dest);
+	idx = 0;
+	while (dest[idx] != '\0')
+		idx++;
+	src_idx = 0;
+	while (src[src_idx] != '\0' && idx + 1 < size)
 	{
-		dst[len_dst] = s[i];
-		len_dst++;
-		i++;
+		dest[idx] = src[src_idx];
+		src_idx++;
+		idx++;
 	}
-	dst[len_dst] = '\0';
-	return (res);
+	dest[idx] = '\0';
+	return (value);
 }

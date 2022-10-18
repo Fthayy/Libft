@@ -6,7 +6,7 @@
 #    By: fay <marvin@42.fr>                         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 11:45:50 by fay               #+#    #+#              #
-#    Updated: 2022/10/16 17:55:24 by fay              ###   ########.fr        #
+#    Updated: 2022/10/18 10:25:19 by fay              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRCS		= ft_memset.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
+			ft_lstmap.c \
 
 OBJS		= $(SRCS:%.c=%.o)
 

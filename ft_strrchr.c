@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:40:11 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 18:16:24 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/18 13:33:03 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
-
+	unsigned char f;
+	f = c;
 	len = ft_strlen(s);
 	while (len >= 0)
 	{
-		if (c > 128)
-			return ((char *)s);
-		if (s[len] == c)
+		if (s[len] == f)
 			return ((char *)s + len);
 		len--;
 	}

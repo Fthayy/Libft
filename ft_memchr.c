@@ -6,18 +6,18 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:18:03 by fay               #+#    #+#             */
-/*   Updated: 2022/10/14 13:02:55 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/18 09:12:07 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*s1;
+	unsigned char	*s1;
 	size_t		x;
 
 	c = (unsigned char)c;
-	s1 = s;
+	s1 = (unsigned char *)s;
 	x = 0;
 	while (x < n)
 	{
