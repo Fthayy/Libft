@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:03:44 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 14:10:37 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/18 15:27:59 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !(split))
 		return (0);
 	i = 0;
 	j = 0;

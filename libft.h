@@ -14,9 +14,9 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 # define BUFFER_SIZE 1
 
@@ -59,7 +59,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 typedef struct s_list
 {
-	void 			*content;
+	void			*content;
 	struct s_list	*next;
 }					t_list;
 t_list				*ft_lstnew(void *content);
