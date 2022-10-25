@@ -73,8 +73,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-fclean: clean
-	rm -f $(NAME)
-
-re: fclean all

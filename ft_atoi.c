@@ -6,7 +6,7 @@
 /*   By: fay <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:14:59 by fay               #+#    #+#             */
-/*   Updated: 2022/10/16 15:13:02 by fay              ###   ########.fr       */
+/*   Updated: 2022/10/20 12:10:14 by fay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,29 @@
 
 int	ft_atoi(const char *str)
 {
-	int	x;
-	int	nb;
-	int	res;
+	int		i;
+	int		neg;
+	long	sayi;
 
-	nb = 1;
-	x = 0;
-	res = 0;
-	while ((str[x] >= 9 && str[x] <= 13) || str[x] == 32)
-		x++;
-	if (str[x] == '-')
+	i = 0;
+	neg = 1;
+	sayi = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		nb = -nb;
-		x++;
+		if (str[i] == '-')
+			neg *= -1;
+		i++;
 	}
-	else if (str[x] == '+')
-		x++;
-	while (str[x] >= '0' && str[x] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (str[x] - '0') + (res * 10);
-		x++;
+		sayi = sayi * 10 + (str[i] - 48);
+		if (sayi * neg < -2147483648)
+			return (0);
+		else if (sayi * neg > 2147483647)
+			return (-1);
+		i++;
 	}
-	return (res * nb);
+	return (sayi * neg);
 }
